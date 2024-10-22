@@ -43,6 +43,23 @@ if __name__ == "__main__":
     print(medTimesQuickSort)
 
     print(medTimesBubbleSort)
+
+    # Plotting the results
+    import matplotlib.pyplot as plt
+    Epochs = [1000,2000,3000,4000,5000]
+    plt.plot(Epochs, medTimesQuickSort, label='QuickSort')
+    plt.plot(Epochs, medTimesBubbleSort, label='BubbleSort')
     
+    plt.title('Time of execution of QuickSort and BubbleSort')
+    plt.xlabel('Epochs')
+    plt.ylabel('Time Execution')
+    plt.show()
+
+    # Plotting the results only for QuickSort
+    plt.plot(Epochs, medTimesQuickSort)
+    plt.title('Time of execution of QuickSort')
+    plt.xlabel('Epochs')
+    plt.ylabel('Time Execution')
+    plt.show()
     
     
